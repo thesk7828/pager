@@ -33,7 +33,7 @@ if (Serial.available())
     if ( mfrc522.PICC_ReadCardSerial())
       {
       //Checking for valid RFID Tag
-      if (mfrc522.uid.uidByte[0] == 0x8E && mfrc522.uid.uidByte[1] == 0x56 && mfrc522.uid.uidByte[2] == 0xAA && mfrc522.uid.uidByte[3] == 0x59)//you can put your own RFID Number
+      if (mfrc522.uid.uidByte[0] == 0x8E && mfrc522.uid.uidByte[1] == 0x56 && mfrc522.uid.uidByte[2] == 0xAA && mfrc522.uid.uidByte[3] == 0x59)//you can paste your own RFID Number
       {
         char ch=Serial.read();
         lcd.print(ch);
